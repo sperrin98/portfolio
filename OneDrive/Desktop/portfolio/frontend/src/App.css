@@ -67,6 +67,25 @@
   margin-top: 100px; /* Adjust based on your layout needs */
 }
 
+.contact-btn {
+  display: inline-block;
+  background-color: #00FFD9;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  /* border-radius: 20px; */
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  left: 20%;
+  top: 41%;
+}
+
+.contact-btn:hover {
+  background-color: #319989; /* Darker shade on hover */
+}
+
 #overview {
   background-color: #f8f9fa;
 }

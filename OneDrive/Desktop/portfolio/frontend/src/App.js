@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import overviewImage from './assets/overview-bg.png'; // Update path if needed
+import overviewImage from './assets/overview-bg.png';
 
 function App() {
   const scrollToSection = (sectionId) => {
@@ -21,7 +21,6 @@ function App() {
       >
         <div className="overview-container">
           <div className="nav-buttons">
-            <button onClick={() => scrollToSection('overview')}>Overview</button>
             <button onClick={() => scrollToSection('about-me')}>About Me</button>
             <button onClick={() => scrollToSection('work-projects')}>Work / Projects</button>
             <button onClick={() => scrollToSection('skills')}>Skills</button>
@@ -31,6 +30,12 @@ function App() {
             <h3 className="intro">Hi, my name is...</h3>
             <h2 className="my-name">Stanley Perrin</h2>
             <h1 className="job-title">I am a web developer</h1>
+            <a
+              className="btn contact-btn"
+              href="mailto:stanperrin98@gmail.com?subject=Get in Touch&body=Hello, I'd like to get in touch with you."
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
       </section>
@@ -44,7 +49,7 @@ function App() {
         <h1>Skills</h1>
       </section>
       <section className="section" id="contact-me">
-        <h1>Contact me</h1>
+        <h1>Contact Me</h1>
       </section>
     </div>
   );
