@@ -35,6 +35,38 @@
   top: 35%;
 }
 
+.nav-buttons {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the buttons horizontally */
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.nav-buttons button {
+  background-color: #f8f9fa;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+  border-radius: 20px;
+}
+
+.nav-buttons button:hover {
+  background-color: #00FFD9;
+  color: #f8f9fa;
+  transition: 0.3s ease;
+}
+
+.text-content {
+  margin-top: 100px; /* Adjust based on your layout needs */
+}
+
 #overview {
   background-color: #f8f9fa;
 }

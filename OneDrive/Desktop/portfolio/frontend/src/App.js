@@ -1,24 +1,37 @@
 import React from 'react';
 import './App.css';
-import overviewImage from './assets/overview-bg.png'; // Adjust path based on where you place the image
+import overviewImage from './assets/overview-bg.png'; // Update path if needed
 
 function App() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="App">
       <section
         className="section"
         id="overview"
         style={{
-          backgroundImage: `url(${overviewImage})`, // Use the correct property and path
+          backgroundImage: `url(${overviewImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
         <div className="overview-container">
-          <h3 className="intro">Hi, my name is...</h3>
-          <h2 className="my-name">Stanley Perrin</h2>
-          <h1 className="job-title">I am a web developer</h1>
+          <div className="nav-buttons">
+            <button onClick={() => scrollToSection('overview')}>Overview</button>
+            <button onClick={() => scrollToSection('about-me')}>About Me</button>
+            <button onClick={() => scrollToSection('work-projects')}>Work / Projects</button>
+            <button onClick={() => scrollToSection('skills')}>Skills</button>
+            <button onClick={() => scrollToSection('contact-me')}>Contact Me</button>
+          </div>
+          <div className="text-content">
+            <h3 className="intro">Hi, my name is...</h3>
+            <h2 className="my-name">Stanley Perrin</h2>
+            <h1 className="job-title">I am a web developer</h1>
+          </div>
         </div>
       </section>
       <section className="section" id="about-me">
