@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .section {
   width: 100vw;
@@ -13,6 +13,28 @@
 }
 
 /* Optional: Add different background colors for each section for visual distinction */
+
+/* OVERVIEW PAGE */
+
+.intro {
+  position: absolute;
+  left: 20%;
+  top: 24%;
+}
+
+.my-name {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+  font-size: 50px;
+}
+
+.job-title {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+
 #overview {
   background-color: #f8f9fa;
 }
