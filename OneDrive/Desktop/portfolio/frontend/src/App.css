@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+}
+
+/* Optional: Add different background colors for each section for visual distinction */
+#overview {
+  background-color: #f8f9fa;
+}
+
+#about-me {
+  background-color: #e9ecef;
+}
+
+#work-projects {
+  background-color: #dee2e6;
+}
+
+#skills {
+  background-color: #ced4da;
+}
+
+#contact-me {
+  background-color: #adb5bd;
+}
