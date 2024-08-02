@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import overviewImage from './assets/overview-bg.png';
+import MapComponent from './MapComponent';
 
 function App() {
   const scrollToSection = (sectionId) => {
@@ -21,6 +22,7 @@ function App() {
       >
         <div className="overview-container">
           <div className="nav-buttons">
+            <button onClick={() => scrollToSection('overview')}>Overview</button>
             <button onClick={() => scrollToSection('about-me')}>About Me</button>
             <button onClick={() => scrollToSection('work-projects')}>Work / Projects</button>
             <button onClick={() => scrollToSection('skills')}>Skills</button>
@@ -40,7 +42,14 @@ function App() {
         </div>
       </section>
       <section className="section" id="about-me">
-        <h1>About me</h1>
+        <div className="left-content">
+          {/* Add your content here */}
+          <h1 className='aboutme-header'>A little bit about me</h1>
+          <p>This is where the information will go on the left side.</p>
+        </div>
+        <div className="map-container">
+          <MapComponent />
+        </div>
       </section>
       <section className="section" id="work-projects">
         <h1>Work / Projects</h1>
