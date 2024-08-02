@@ -16,6 +16,7 @@
   position: absolute;
   left: 20%;
   top: 24%;
+  color: #00FFD9;
 }
 
 .my-name {
@@ -23,12 +24,14 @@
   left: 20%;
   top: 25%;
   font-size: 50px;
+  color: #00FFD9;
 }
 
 .job-title {
   position: absolute;
   left: 20%;
   top: 35%;
+  color: #00FFD9;
 }
 
 .nav-buttons {
@@ -43,8 +46,8 @@
 }
 
 .nav-buttons button {
-  background-color: #f8f9fa;
-  color: black;
+  background-color: #1e1f1f;
+  color: #00FFD9;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -55,7 +58,7 @@
 
 .nav-buttons button:hover {
   background-color: #00FFD9;
-  color: #f8f9fa;
+  color: #1e1f1f;
   transition: 0.3s ease;
 }
 
@@ -66,7 +69,7 @@
 .contact-btn {
   display: inline-block;
   background-color: #00FFD9;
-  color: white;
+  color: #1e1f1f;
   padding: 10px 20px;
   text-decoration: none;
   font-size: 16px;
@@ -75,6 +78,7 @@
   position: absolute;
   left: 20%;
   top: 41%;
+  border-radius: 10px;
 }
 
 .contact-btn:hover {
@@ -82,32 +86,60 @@
 }
 
 #overview {
-  background-color: #f8f9fa;
-}
-
-/* GENERAL STYLES */
-.section {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-  scroll-snap-type: y mandatory;
+  background-color: #1e1f1f;
 }
 
 /* ABOUT ME PAGE */
 #about-me {
   background-color: #e9ecef;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
 }
 
 /* LEFT CONTENT */
 .left-content {
   width: 50%;
-  padding-right: 20px; /* Space between content and map */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns items at the top */
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  align-self: center;
+  margin-top: 15%;
+}
+
+.aboutme-header {
+  padding-left: 20%;
+}
+
+.about-section {
+  padding-left: 20%;
+}
+
+.experience-header {
+  padding-left: 20%;
+}
+
+.experience-section {
+  padding-left: 20%;
+}
+
+.travel-header {
+  position: absolute;
+  top: 101%;
+  left: 69%;
+}
+
+/* RIGHT CONTENT */
+.right-content {
+  width: 50%;
+  display: flex;
+  align-items: center; /* Centers map vertically */
+  justify-content: center; /* Centers map horizontally */
 }
 
 /* MAP CONTAINER */
@@ -115,8 +147,8 @@
   width: 500px; /* Fixed width */
   height: 750px; /* Fixed height */
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center; /* Centers map vertically */
+  justify-content: center; /* Centers map horizontally */
   border: solid 2px #00FFD9;
   box-shadow: 5px 5px 40px gray;
 }
@@ -125,9 +157,6 @@
 .map-container .leaflet-container {
   width: 100%; /* Make sure the map fills its container */
   height: 100%; /* Make sure the map fills its container */
-}
-
-.aboutme-header {
 }
 
 #work-projects {
