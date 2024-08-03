@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import overviewImage from './assets/overview-bg.png';
+import MapComponent from './MapComponent';
+import profileImage from './assets/profile.jpg'
 
 function App() {
   const scrollToSection = (sectionId) => {
@@ -21,6 +23,7 @@ function App() {
       >
         <div className="overview-container">
           <div className="nav-buttons">
+            <button onClick={() => scrollToSection('overview')}>Overview</button>
             <button onClick={() => scrollToSection('about-me')}>About Me</button>
             <button onClick={() => scrollToSection('work-projects')}>Work / Projects</button>
             <button onClick={() => scrollToSection('skills')}>Skills</button>
@@ -40,7 +43,19 @@ function App() {
         </div>
       </section>
       <section className="section" id="about-me">
-        <h1>About me</h1>
+        <div className="left-content">
+        <img className='profile-img' src={profileImage} alt="Profile" />
+          <h1 className='aboutme-header'>A little bit about me...</h1>
+          <p className='about-section'>I am a web developer, specialising in both frontend and backend practices, both the interface and design of a website or app. I graduated Le Wagon's Web Development in July of 2022, and have years of experience building web apps, since 2020.</p>
+          <h1 className='experience-header'>My experience</h1>
+          <p className='experience-section'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <h1 className='travel-header'>Where I've travelled</h1>
+        <div className='right-content'>
+          <div className="map-container">
+            <MapComponent />
+          </div>
+        </div>
       </section>
       <section className="section" id="work-projects">
         <h1>Work / Projects</h1>
