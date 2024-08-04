@@ -85,6 +85,30 @@
   background-color: #319989; /* Darker shade on hover */
 }
 
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #1e1f1f;
+}
+
+.social-icons a:hover {
+  color: #1e1f1f;
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+.social-icons-container {
+  background-color: #00ff00;
+}
+
 #overview {
   background-color: #1e1f1f;
 }
