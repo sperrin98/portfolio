@@ -1,0 +1,168 @@
+/* Container for the projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a grid with 3 equal columns */
+    gap: 20px; /* Space between the grid items */
+    padding: 20px; /* Padding around the grid */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Style for individual project cards */
+  .project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Fixed height for all cards */
+  }
+  
+  /* Hover effect for project cards */
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for project card image */
+  .project-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+  }
+  
+  /* Content area inside the card */
+  .project-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Title of the project */
+  .project-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Description of the project */
+  .project-description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+    flex: 1; /* Ensures description area expands to fill space */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits to 3 lines of text */
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Button to view more information */
+  .view-more-btn {
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+  }
+  
+  /* Close Button for Modal Header */
+  .close-modal-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-modal-btn:hover {
+    color: #007bff;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    margin-top: 20px;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .modal-footer .close-modal-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .modal-footer .close-modal-btn:hover {
+    background-color: #0056b3;
+  }
+  
