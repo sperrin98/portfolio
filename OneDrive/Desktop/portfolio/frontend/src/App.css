@@ -160,7 +160,22 @@
 }
 
 #work-projects {
-  background-color: #dee2e6;
+  background-color: #f9f9f9; /* Optional: background color for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns items horizontally */
+  justify-content: flex-start; /* Ensures items start from the top */
+  min-height: 100vh; /* Ensure the section takes full viewport height (optional) */
+}
+
+/* Work/Projects section heading */
+#work-projects h1 {
+  margin: 0; /* Removes default margin */
+  padding: 20px 0; /* Adds space above and below the heading */
+  font-size: 2.5em; /* Adjust font size as needed */
+  color: #333; /* Color of the heading text */
+  text-align: center; /* Centers the text within the heading */
+  padding-bottom: 175px;
 }
 
 #skills {
