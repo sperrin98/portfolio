@@ -1,0 +1,177 @@
+/* OVERVIEW PAGE */
+#overview {
+    background-color: rgb(233, 232, 241);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-container {
+    height: 600px;
+    width: 1250px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row; /* Change to row to position children side by side */
+    align-items: center;
+    justify-content: flex-start; /* Align children to the start of the container */
+    position: relative;
+    padding: 20px; /* Add padding to avoid content touching the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  }
+  
+  /* L-Shaped Border Effect with 20px Offset */
+  .main-container::before,
+  .main-container::after {
+    content: "";
+    position: absolute;
+    pointer-events: none; /* Ensures the pseudo-elements do not block interactions */
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    animation: borderExpand 2s infinite alternate; /* Add animation */
+  }
+  
+  /* Top-Left L-Shaped Border */
+  .main-container::before {
+    top: -20px; /* Move border 20px away from the top edge */
+    left: -20px; /* Move border 20px away from the left edge */
+    width: 380px; /* Horizontal extent of the border */
+    height: 250px; /* Vertical extent of the border */
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  /* Bottom-Right L-Shaped Border */
+  .main-container::after {
+    bottom: -20px; /* Move border 20px away from the bottom edge */
+    right: -20px; /* Move border 20px away from the right edge */
+    width: 380px; /* Horizontal extent of the border */
+    height: 250px; /* Vertical extent of the border */
+    border-top: none;
+    border-left: none;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes borderExpand {
+    0% {
+      width: 380px;
+      height: 250px;
+    }
+    50% {
+      width: 480px; /* Lengthen the border horizontally */
+      height: 350px; /* Lengthen the border vertically */
+    }
+    100% {
+      width: 380px;
+      height: 250px;
+    }
+  }
+  
+  /* TEXT CONTENT */
+  .text-content {
+    color: red;
+    max-width: 50%; /* Limit the width to ensure it doesn't overflow */
+  }
+  
+  /* TEXT STYLES */
+  .intro, .my-name, .job-title {
+    color: black;
+  }
+  
+  .intro {
+    font-size: 1.5em;
+  }
+  
+  .my-name {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .job-title {
+    font-size: 2em;
+  }
+  
+  /* CONTACT BUTTON */
+  .contact-btn {
+    display: inline-block;
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid black; /* Original border color */
+    position: relative; /* Required for positioning the pseudo-element */
+    box-shadow: 5px 5px 0 0 black; /* Moves the border 5px away from the button */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+  }
+  
+  .contact-btn:hover {
+    box-shadow: 0 0 0 0 black; /* Brings the border back to the button */
+  }
+  
+  /* NAV BUTTONS */
+  .nav-buttons {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  
+  .nav-buttons button {
+    background-color: rgb(233, 232, 241);
+    color: #1c1c24;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+    border-radius: 20px;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: red;
+    color: black;
+    transition: 0.3s ease;
+  }
+  
+  /* SOCIAL ICONS CONTAINER */
+  .social-icons-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(11, 11, 17, 0.5);
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    z-index: 1000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  /* SOCIAL ICONS STYLES */
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+  
