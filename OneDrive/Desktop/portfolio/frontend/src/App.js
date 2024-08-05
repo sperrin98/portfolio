@@ -22,6 +22,7 @@ function App() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          position: 'relative'
         }}
       >
         <div className="overview-container">
@@ -43,15 +44,15 @@ function App() {
               Get in Touch
             </a>
           </div>
-          <div className='social-icons-container'>
+          <div className="social-icons-container">
             <div className="social-icons">
-              <a href="https://github.com/sperrin98" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
-              <a href="https://www.linkedin.com/in/stanley-perrin-442a6120a/" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
-              <a href="https://facebook.com/stan.perrin.9" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com/your-facebook-username" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
             </div>
