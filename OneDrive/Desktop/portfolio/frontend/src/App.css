@@ -1,3 +1,4 @@
+/* Container for sections */
 .section {
   width: 100vw;
   height: 100vh;
@@ -8,174 +9,79 @@
   scroll-snap-type: y mandatory;
 }
 
-/* Optional: Add different background colors for each section for visual distinction */
-
-/* OVERVIEW PAGE */
-
-.intro {
-  position: absolute;
-  left: 20%;
-  top: 24%;
-  color: #00FFD9;
-}
-
-.my-name {
-  position: absolute;
-  left: 20%;
-  top: 25%;
-  font-size: 50px;
-  color: #00FFD9;
-}
-
-.job-title {
-  position: absolute;
-  left: 20%;
-  top: 35%;
-  color: #00FFD9;
-}
-
-.nav-buttons {
-  position: absolute;
-  top: 20px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%); /* Centers the buttons horizontally */
-  display: flex;
-  gap: 20px; /* Space between buttons */
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.nav-buttons button {
-  background-color: #1e1f1f;
-  color: #00FFD9;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 100;
-  border-radius: 20px;
-}
-
-.nav-buttons button:hover {
-  background-color: #00FFD9;
-  color: #1e1f1f;
-  transition: 0.3s ease;
-}
-
-.text-content {
-  margin-top: 100px; /* Adjust based on your layout needs */
-}
-
-.contact-btn {
-  display: inline-block;
-  background-color: #00FFD9;
-  color: #1e1f1f;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  position: absolute;
-  left: 20%;
-  top: 41%;
-  border-radius: 10px;
-}
-
-.contact-btn:hover {
-  background-color: #319989; /* Darker shade on hover */
-}
-
-#overview {
-  background-color: #1e1f1f;
-}
-
-/* ABOUT ME PAGE */
-#about-me {
-  background-color: #e9ecef;
-  display: flex;
-}
-
-/* LEFT CONTENT */
-.left-content {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Aligns items at the top */
-}
-
-.profile-img {
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  align-self: center;
-  margin-top: 15%;
-}
-
-.aboutme-header {
-  padding-left: 20%;
-}
-
-.about-section {
-  padding-left: 20%;
-}
-
-.experience-header {
-  padding-left: 20%;
-}
-
-.experience-section {
-  padding-left: 20%;
-}
-
-.travel-header {
-  position: absolute;
-  top: 101%;
-  left: 69%;
-}
-
-/* RIGHT CONTENT */
-.right-content {
-  width: 50%;
-  display: flex;
-  align-items: center; /* Centers map vertically */
-  justify-content: center; /* Centers map horizontally */
-}
-
-/* MAP CONTAINER */
-.map-container {
-  width: 500px; /* Fixed width */
-  height: 750px; /* Fixed height */
-  display: flex;
-  align-items: center; /* Centers map vertically */
-  justify-content: center; /* Centers map horizontally */
-  border: solid 2px #00FFD9;
-  box-shadow: 5px 5px 40px gray;
-}
-
-/* Ensure the map fills its container */
-.map-container .leaflet-container {
-  width: 100%; /* Make sure the map fills its container */
-  height: 100%; /* Make sure the map fills its container */
-}
-
+/* WORK / PROJECTS PAGE */
 #work-projects {
-  background-color: #f9f9f9; /* Optional: background color for contrast */
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center-aligns items horizontally */
-  justify-content: flex-start; /* Ensures items start from the top */
-  min-height: 100vh; /* Ensure the section takes full viewport height (optional) */
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
-/* Work/Projects section heading */
 #work-projects h1 {
-  margin: 0; /* Removes default margin */
-  padding: 20px 0; /* Adds space above and below the heading */
-  font-size: 2.5em; /* Adjust font size as needed */
-  color: #333; /* Color of the heading text */
-  text-align: center; /* Centers the text within the heading */
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
   padding-bottom: 175px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* PROJECT CARD STYLES */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+  flex-grow: 1;
+}
+
+.project-link {
+  margin-top: auto;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
 
 #skills {
