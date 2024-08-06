@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './Overview.css';
 import './AboutMe.css';
@@ -9,8 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
+  const [activeSkill, setActiveSkill] = useState('html-css');
+
+  // Scroll to a section smoothly
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Ensure only one skill is active at all times
+  const handleSkillClick = (skillId) => {
+    setActiveSkill(skillId);
   };
 
   return (
@@ -34,6 +42,70 @@ function App() {
               >
                 Get in Touch
               </a>
+            </div>
+            <div className="skills-container">
+              <ul className="skills-list">
+                <li
+                  className={`skill ${activeSkill === 'html-css' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('html-css')}
+                >
+                  HTML & CSS
+                </li>
+                <div className={`skill-details ${activeSkill === 'html-css' ? 'active' : ''}`} id="html-css">
+                  <h3>HTML & CSS</h3>
+                  <p>Detailed information about HTML & CSS goes here.</p>
+                </div>
+                <li
+                  className={`skill ${activeSkill === 'ruby' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('ruby')}
+                >
+                  Ruby on Rails
+                </li>
+                <div className={`skill-details ${activeSkill === 'ruby' ? 'active' : ''}`} id="ruby">
+                  <h3>Ruby on Rails</h3>
+                  <p>Detailed information about Ruby on Rails goes here.</p>
+                </div>
+                <li
+                  className={`skill ${activeSkill === 'mysql' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('mysql')}
+                >
+                  MySQL
+                </li>
+                <div className={`skill-details ${activeSkill === 'mysql' ? 'active' : ''}`} id="mysql">
+                  <h3>MySQL</h3>
+                  <p>Detailed information about MySQL goes here.</p>
+                </div>
+                <li
+                  className={`skill ${activeSkill === 'javascript' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('javascript')}
+                >
+                  JavaScript
+                </li>
+                <div className={`skill-details ${activeSkill === 'javascript' ? 'active' : ''}`} id="javascript">
+                  <h3>JavaScript</h3>
+                  <p>Detailed information about JavaScript goes here.</p>
+                </div>
+                <li
+                  className={`skill ${activeSkill === 'react' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('react')}
+                >
+                  React
+                </li>
+                <div className={`skill-details ${activeSkill === 'react' ? 'active' : ''}`} id="react">
+                  <h3>React</h3>
+                  <p>Detailed information about React goes here.</p>
+                </div>
+                <li
+                  className={`skill ${activeSkill === 'python' ? 'active' : ''}`}
+                  onClick={() => handleSkillClick('python')}
+                >
+                  Python
+                </li>
+                <div className={`skill-details ${activeSkill === 'python' ? 'active' : ''}`} id="python">
+                  <h3>Python</h3>
+                  <p>Detailed information about Python goes here.</p>
+                </div>
+              </ul>
             </div>
           </div>
           <div className="social-icons-container">
@@ -73,16 +145,20 @@ function App() {
       <section className="section" id="work-projects">
         <h1>Work / Projects</h1>
         <div className="projects-container">
-          <ProjectCard title="Flickswipe" description="Flickswipe is a mobile app, designed to help users find a movie or TV show to watch. This app was built using Ruby on Rails. Upon opening the app, the user is prompted to create an account, where they can then add friends, the two users, then pick there genre, TV or movie, and they begin swiping until both users swipe right on the same movie where they will be notified of a match, a Tinder like process. An API was used to fetch TV shows and movies, and then was displayed through a modal developed through JavaScript and Ruby. The data, of friendships, matched content, liked movies are all stored in a SQLite database." />
+          <ProjectCard title="Flickswipe" description="Flickswipe is a mobile app, designed to help users find a movie or TV show to watch. This app was built using Ruby on Rails. Upon opening the app, the user is prompted to create an account, where they can then add friends, the two users, then pick their genre, TV or movie, and they begin swiping until both users swipe right on the same movie where they will be notified of a match, a Tinder-like process. An API was used to fetch TV shows and movies, and then was displayed through a modal developed through JavaScript and Ruby. The data, of friendships, matched content, liked movies are all stored in a SQLite database." />
           <ProjectCard title="Boatee" description="Description for Boatee" />
-          <ProjectCard title="Perrinvest" description="Perrinvest is a web-app, an investment app, where the user can view price histories, of stocks, shares, currencies and other economical data. The majority of the data comes from a MySQL database, which was developed through MySQL and Visual Basic. The data is then fetched from the MySQL database from SQL queries incorporated within Python/Flask code, the backend of the app is coded in Python and Flask, whereas the frontend is in JavaScript and React. Chart.js was used to visualise the data in to line graphs, as well as yfinance API, where the data is visualised in candlestick graphs. There is also a feature to divide two securities / currencies together to create a market ratio, and the opportunity to view different stocks priced in different currencies." />
+          <ProjectCard title="Perrinvest" description="Perrinvest is a web-app, an investment app, where the user can view price histories, of stocks, shares, currencies and other economical data. The majority of the data comes from a MySQL database, which was developed through MySQL and Visual Basic. The data is then fetched from the MySQL database from SQL queries incorporated within Python/Flask code, the backend of the app is coded in Python and Flask, whereas the frontend is in JavaScript." />
         </div>
-      </section>
-      <section className="section" id="skills">
-        <h1>Skills</h1>
       </section>
       <section className="section" id="contact-me">
         <h1>Contact Me</h1>
+        <div className="contact-container">
+          <p>If you have any questions, feel free to reach out to me via the following methods:</p>
+          <ul>
+            <li>Email: <a href="mailto:stanperrin98@gmail.com">stanperrin98@gmail.com</a></li>
+            <li>Phone: <a href="tel:+1234567890">+1234567890</a></li>
+          </ul>
+        </div>
       </section>
     </div>
   );

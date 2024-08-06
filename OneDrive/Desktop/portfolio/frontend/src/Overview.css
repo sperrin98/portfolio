@@ -7,24 +7,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .main-container {
+}
+
+.main-container {
     height: 600px;
     width: 1250px;
     background-color: #ffffff;
     display: flex;
-    flex-direction: row; /* Change to row to position children side by side */
-    align-items: center;
-    justify-content: flex-start; /* Align children to the start of the container */
+    align-items: stretch; /* Ensure children stretch to fill height */
+    justify-content: space-between;
     position: relative;
-    padding: 20px; /* Add padding to avoid content touching the border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-  }
-  
-  /* L-Shaped Border Effect with 20px Offset */
-  .main-container::before,
-  .main-container::after {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Include padding and border in the height */
+}
+
+/* L-Shaped Border Effect with 20px Offset */
+.main-container::before,
+.main-container::after {
     content: "";
     position: absolute;
     pointer-events: none; /* Ensures the pseudo-elements do not block interactions */
@@ -33,70 +33,69 @@
     border-bottom: 2px solid red;
     border-right: 2px solid red;
     animation: borderExpand 2s infinite alternate; /* Add animation */
-  }
-  
-  /* Top-Left L-Shaped Border */
-  .main-container::before {
+}
+
+/* Top-Left L-Shaped Border */
+.main-container::before {
     top: -20px; /* Move border 20px away from the top edge */
     left: -20px; /* Move border 20px away from the left edge */
     width: 380px; /* Horizontal extent of the border */
     height: 250px; /* Vertical extent of the border */
     border-bottom: none;
     border-right: none;
-  }
-  
-  /* Bottom-Right L-Shaped Border */
-  .main-container::after {
+}
+
+/* Bottom-Right L-Shaped Border */
+.main-container::after {
     bottom: -20px; /* Move border 20px away from the bottom edge */
     right: -20px; /* Move border 20px away from the right edge */
     width: 380px; /* Horizontal extent of the border */
     height: 250px; /* Vertical extent of the border */
     border-top: none;
     border-left: none;
-  }
-  
-  /* Animation Keyframes */
-  @keyframes borderExpand {
+}
+
+/* Animation Keyframes */
+@keyframes borderExpand {
     0% {
-      width: 380px;
-      height: 250px;
+        width: 380px;
+        height: 250px;
     }
     50% {
-      width: 480px; /* Lengthen the border horizontally */
-      height: 350px; /* Lengthen the border vertically */
+        width: 480px; /* Lengthen the border horizontally */
+        height: 350px; /* Lengthen the border vertically */
     }
     100% {
-      width: 380px;
-      height: 250px;
+        width: 380px;
+        height: 250px;
     }
-  }
-  
-  /* TEXT CONTENT */
-  .text-content {
-    color: red;
-    max-width: 50%; /* Limit the width to ensure it doesn't overflow */
-  }
-  
-  /* TEXT STYLES */
-  .intro, .my-name, .job-title {
+}
+
+/* TEXT CONTENT */
+.text-content {
+    max-width: 50%;
+}
+
+/* TEXT STYLES */
+.intro, .my-name, .job-title {
     color: black;
-  }
-  
-  .intro {
+}
+
+.intro {
     font-size: 1.5em;
-  }
-  
-  .my-name {
+}
+
+.my-name {
     font-size: 2.5em;
     font-weight: bold;
-  }
-  
-  .job-title {
+}
+
+.job-title {
     font-size: 2em;
-  }
-  
-  /* CONTACT BUTTON */
-  .contact-btn {
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
     display: inline-block;
     background-color: red;
     color: black;
@@ -105,18 +104,75 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
-    border: 2px solid black; /* Original border color */
-    position: relative; /* Required for positioning the pseudo-element */
-    box-shadow: 5px 5px 0 0 black; /* Moves the border 5px away from the button */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
-  }
-  
-  .contact-btn:hover {
-    box-shadow: 0 0 0 0 black; /* Brings the border back to the button */
-  }
-  
-  /* NAV BUTTONS */
-  .nav-buttons {
+    border: 2px solid black;
+    position: relative;
+    box-shadow: 5px 5px 0 0 black;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+    box-shadow: 0 0 0 0 black;
+}
+
+/* SKILLS CONTAINER */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill height of the main-container */
+    width: 50%; /* Maintain original width */
+    box-sizing: border-box;
+}
+
+/* SKILLS LIST */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width of container */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill height of the container */
+}
+
+/* Each skill tab */
+.skill {
+    width: 100%;
+    height: 100%; /* Ensure all tabs take full height */
+    box-sizing: border-box; /* Include padding and border in height */
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Active skill tab */
+.skill.active {
+    background-color: #d0d0d0;
+    font-weight: bold;
+}
+
+/* Skill details */
+.skill-details {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in height */
+}
+
+/* Display skill details when tab is active */
+.skill.active + .skill-details {
+    display: block;
+}
+
+/* NAV BUTTONS */
+.nav-buttons {
     position: absolute;
     top: 20px;
     left: 50%;
@@ -125,9 +181,9 @@
     gap: 20px;
     justify-content: center;
     border-radius: 20px;
-  }
-  
-  .nav-buttons button {
+}
+
+.nav-buttons button {
     background-color: rgb(233, 232, 241);
     color: #1c1c24;
     border: none;
@@ -136,16 +192,16 @@
     font-size: 16px;
     font-weight: 100;
     border-radius: 20px;
-  }
-  
-  .nav-buttons button:hover {
+}
+
+.nav-buttons button:hover {
     background-color: red;
     color: black;
     transition: 0.3s ease;
-  }
-  
-  /* SOCIAL ICONS CONTAINER */
-  .social-icons-container {
+}
+
+/* SOCIAL ICONS CONTAINER */
+.social-icons-container {
     position: absolute;
     top: 50%;
     right: 0;
@@ -156,22 +212,21 @@
     z-index: 1000;
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-  
-  /* SOCIAL ICONS STYLES */
-  .social-icons {
+}
+
+/* SOCIAL ICONS STYLES */
+.social-icons {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #333;
     transition: transform 0.3s ease;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: red;
     transform: scale(1.2);
-  }
-  
+}
