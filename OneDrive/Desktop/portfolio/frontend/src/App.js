@@ -46,6 +46,7 @@ function App() {
                 Get in Touch
               </a>
             </div>
+            <h1 className='skills-title'>MY SKILLS</h1>
             <div className="skills-container">
               <SkillsCarousel skills={skills} />
             </div>

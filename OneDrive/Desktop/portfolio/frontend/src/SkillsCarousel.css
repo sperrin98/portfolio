@@ -1,31 +1,32 @@
-/* SkillsCarousel.css */
 .skills-carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 300px; /* Width of the carousel */
+    width: 100%; /* Width of the carousel */
     height: 100%; /* Full height of the container */
     overflow: hidden;
     border: 1px solid #ccc; /* Optional border */
     border-radius: 5px; /* Optional border radius */
-  }
-  
-  .carousel-container {
+}
+
+.carousel-container {
     height: 100%; /* Full height of the carousel */
     overflow: hidden; /* Hide overflowing content */
     position: relative;
-  }
-  
-  .carousel-slides {
+}
+
+.carousel-slides {
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease;
     height: 100%; /* Full height of the carousel */
-  }
-  
-  .carousel-slide {
+    width: 100%; /* Full width of the carousel */
+}
+
+.carousel-slide {
     height: 100%; /* Ensure each slide takes full height */
+    width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +35,10 @@
     flex-shrink: 0;
     box-sizing: border-box;
     text-align: center; /* Center text horizontally */
+}
+
+  .skills-carousel:hover {
+    overflow: hidden; /* Disable page scroll when hovering over the carousel */
   }
   
   .carousel-control {

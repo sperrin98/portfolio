@@ -176,7 +176,7 @@
   }
   
   .skills-container {
-    width: 300px; /* Width of the carousel */
+    width: 500px; /* Width of the carousel */
     height: 100%; /* Full height */
     overflow: hidden; /* Hide overflow */
     flex-shrink: 0;
@@ -188,4 +188,23 @@
 
   .skills-carousel-container {
     flex-shrink: 0;
+  }
+
+  .skills-title {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    left: 53%;
+    top: 77%;
+    margin-top: -30px;
+    font-size: 4em;
+    white-space: nowrap;
+  }
+
+  .letter.red {
+    color: red;
+  }
+  
+  .letter.black {
+    color: black;
   }
