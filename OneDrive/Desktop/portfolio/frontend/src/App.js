@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import './Overview.css';
 import './AboutMe.css';
+import './Work.css';
 import ProjectCard from './ProjectCard';
 import MapComponent from './MapComponent';
 import SkillsCarousel from './SkillsCarousel'; // Import the SkillsCarousel component
@@ -67,8 +68,8 @@ function App() {
         </div>
       </section>
 
-      <div class="aboutme-header-container">
-        <h1 class="aboutme-header">About Me</h1>
+      <div className='aboutme-header-container'>
+        <h1 className='aboutme-header'>About Me</h1>
       </div>
 
       <section className="section" id="about-me">
@@ -83,7 +84,7 @@ function App() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <h1 className='travel-header'>Where I've travelled</h1>
+        {/* <h1 className='travel-header'>Where I've travelled</h1> */}
         <div className='right-content'>
           <div className="map-container">
             <MapComponent />
@@ -91,9 +92,11 @@ function App() {
         </div>
       </section>
 
+      <div className='work-header-container'>
+        <h1 className='work-header'>Work / Projects</h1>
+      </div>
 
       <section className="section" id="work-projects">
-        <h1>Work / Projects</h1>
         <div className="projects-container">
           <ProjectCard title="Flickswipe" description="Flickswipe is a mobile app, designed to help users find a movie or TV show to watch. This app was built using Ruby on Rails. Upon opening the app, the user is prompted to create an account, where they can then add friends, the two users, then pick there genre, TV or movie, and they begin swiping until both users swipe right on the same movie where they will be notified of a match, a Tinder like process. An API was used to fetch TV shows and movies, and then was displayed through a modal developed through JavaScript and Ruby. The data, of friendships, matched content, liked movies are all stored in a SQLite database." />
           <ProjectCard title="Boatee" description="Description for Boatee" />

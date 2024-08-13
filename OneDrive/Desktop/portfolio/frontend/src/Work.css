@@ -1,0 +1,59 @@
+/* WORK PROJECTS SECTION */
+#work-projects {
+    background-color: #dee2e6; /* Background color for visibility */
+    position: relative; /* Ensure it's the reference point for absolute positioning */
+}
+
+/* Container for the title and lines */
+.work-header-container {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position relative to the parent section */
+    right: 0; /* Align to the right edge of the parent */
+    top: 200vh; /* Position it further down the page */
+    transform: translateY(-50%); /* Center vertically within the section */
+    z-index: 10; /* Ensure it appears on top */
+    padding: 0 20px; /* Space from the edges */
+    width: auto; /* Width should adjust based on content */
+    max-width: 100%; /* Ensure it does not exceed the viewport width */
+}
+
+/* Title styling */
+.work-header {
+    font-size: 2rem;
+    color: #333;
+    padding: 0 20px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    margin-left: 220px;
+    margin-right: 470px;
+    left: 27%;
+}
+
+/* Left and right lines styling */
+.work-header-container::before,
+.work-header-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center lines vertically */
+    border-bottom: 2px solid red; /* Line color and thickness */
+}
+
+/* Left line */
+.work-header-container::before {
+    right: 47%;
+    width: 400px;
+    margin-right: 20px;
+}
+
+/* Right line */
+.work-header-container::after {
+    right: 0;
+    left: 74%;
+    margin-left: 20px;
+    width: 250px;
+}
+
+  
