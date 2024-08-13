@@ -3,6 +3,7 @@ import './App.css';
 import './Overview.css';
 import './AboutMe.css';
 import './Work.css';
+import './ContactMe.css';
 import ProjectCard from './ProjectCard';
 import MapComponent from './MapComponent';
 import SkillsCarousel from './SkillsCarousel'; // Import the SkillsCarousel component
@@ -104,12 +105,9 @@ function App() {
         </div>
       </section>
 
-      <section className="section" id="skills">
-        <h1>Skills</h1>
-        <div className="skills-carousel-container">
-          {/* SkillsCarousel component is already included in the overview section */}
-        </div>
-      </section>
+      <div className='contact-header-container'>
+        <h1 className='contact-header'>Contact Me</h1>
+      </div>
 
       <section className="section" id="contact-me">
         <h1>Contact Me</h1>
