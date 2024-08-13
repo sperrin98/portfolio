@@ -12,7 +12,7 @@
   .main-container {
     height: 600px;
     width: 1250px;
-    background-color: #ffffff;
+    background-color:  #ffffff;
     display: flex;
     flex-direction: row; /* Position children side by side */
     align-items: center;

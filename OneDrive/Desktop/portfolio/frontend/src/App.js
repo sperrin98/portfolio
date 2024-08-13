@@ -70,7 +70,7 @@ function App() {
       </section>
 
       <div className='aboutme-header-container'>
-        <h1 className='aboutme-header'>About Me</h1>
+        <h1 className='about-header'>About Me</h1>
       </div>
 
       <section className="section" id="about-me">

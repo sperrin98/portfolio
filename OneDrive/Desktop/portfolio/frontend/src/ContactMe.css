@@ -1,5 +1,5 @@
 #contact-me {
-    background-color: antiquewhite;
+    background-color: #e9ecef;
     position: relative;
 }
 
@@ -24,7 +24,7 @@
     white-space: nowrap; /* Prevent text from wrapping */
     position: relative; /* Ensure title is above the lines */
     z-index: 1; /* Keep title on top */
-    left: 180px;
+    left: 380px;
   }
 
 .contact-header-container::before,
@@ -37,14 +37,14 @@
 }
 
 .contact-header-container::before {
-    left: 0; /* Align left line to the start of the container */
-    width: 198px; /* Length of the left line */
-    margin-left: 20px; /* Space from the left edge of the container */
+    left: 9%;
+    width: 300px;
+    margin-left: 20px;
 }
 
 .contact-header-container::after {
     right: 0; /* Align right line to the end of the container */
-    left: 378px; /* Position to the right of the title */
+    left: 580px; /* Position to the right of the title */
     margin-left: 20px; /* Space between line and title */
-    width: 450px; /* Length of the right line */
+    width: 300px; /* Length of the right line */
 }
