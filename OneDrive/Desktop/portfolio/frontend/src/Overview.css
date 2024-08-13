@@ -14,9 +14,9 @@
     width: 1250px;
     background-color: #ffffff;
     display: flex;
-    flex-direction: row; /* Change to row to position children side by side */
+    flex-direction: row; /* Position children side by side */
     align-items: center;
-    justify-content: flex-start; /* Align children to the start of the container */
+    justify-content: space-between; /* Align children to the start of the container */
     position: relative;
     padding: 20px; /* Add padding to avoid content touching the border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
@@ -175,3 +175,36 @@
     transform: scale(1.2);
   }
   
+  .skills-container {
+    width: 500px; /* Width of the carousel */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Hide overflow */
+    flex-shrink: 0;
+  }
+  
+  .skills-carousel {
+    height: 100%; /* Full height */
+  }
+
+  .skills-carousel-container {
+    flex-shrink: 0;
+  }
+
+  .skills-title {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    left: 53%;
+    top: 77%;
+    margin-top: -30px;
+    font-size: 4em;
+    white-space: nowrap;
+  }
+
+  .letter.red {
+    color: red;
+  }
+  
+  .letter.black {
+    color: black;
+  }
