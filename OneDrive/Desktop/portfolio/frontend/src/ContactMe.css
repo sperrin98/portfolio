@@ -1,0 +1,50 @@
+#contact-me {
+    background-color: #e9ecef;
+    position: relative;
+}
+
+.contact-header-container {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Allow positioning within parent */
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    left: 0; /* Align to the left edge */
+    margin: 0 auto; /* Center horizontally within the container */
+    padding: 0 20px; /* Space from the left edge */
+    top: 300vh; /* Adjust to position it between sections */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10; /* Ensure it appears on top */
+}
+
+.contact-header {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #333; /* Adjust text color if needed */
+    padding: 0 20px; /* Space between text and lines */
+    white-space: nowrap; /* Prevent text from wrapping */
+    position: relative; /* Ensure title is above the lines */
+    z-index: 1; /* Keep title on top */
+    left: 380px;
+  }
+
+.contact-header-container::before,
+.contact-header-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center lines vertically */
+    border-bottom: 2px solid red; /* Line color and thickness */
+}
+
+.contact-header-container::before {
+    left: 9%;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.contact-header-container::after {
+    right: 0; /* Align right line to the end of the container */
+    left: 580px; /* Position to the right of the title */
+    margin-left: 20px; /* Space between line and title */
+    width: 300px; /* Length of the right line */
+}
