@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-     <section className="section" id="overview">
+      <section className="section" id="overview">
         <div className="overview-container">
           <div className="nav-buttons">
             <button onClick={() => scrollToSection('about-me')}>About Me</button>
@@ -66,6 +66,7 @@ function App() {
           </div>
         </div>
       </section>
+
       <section className="section" id="about-me">
         <div className="left-content">
           <img className='profile-img' src={profileImage} alt="Profile" />
@@ -85,6 +86,7 @@ function App() {
           </div>
         </div>
       </section>
+
       <section className="section" id="work-projects">
         <h1>Work / Projects</h1>
         <div className="projects-container">
@@ -93,11 +95,14 @@ function App() {
           <ProjectCard title="Perrinvest" description="Perrinvest is a web-app, an investment app, where the user can view price histories, of stocks, shares, currencies and other economical data. The majority of the data comes from a MySQL database, which was developed through MySQL and Visual Basic. The data is then fetched from the MySQL database from SQL queries incorporated within Python/Flask code, the backend of the app is coded in Python and Flask, whereas the frontend is in JavaScript and React. Chart.js was used to visualise the data in to line graphs, as well as yfinance API, where the data is visualised in candlestick graphs. There is also a feature to divide two securities / currencies together to create a market ratio, and the opportunity to view different stocks priced in different currencies." />
         </div>
       </section>
+
       <section className="section" id="skills">
         <h1>Skills</h1>
         <div className="skills-carousel-container">
+          {/* SkillsCarousel component is already included in the overview section */}
         </div>
       </section>
+
       <section className="section" id="contact-me">
         <h1>Contact Me</h1>
       </section>

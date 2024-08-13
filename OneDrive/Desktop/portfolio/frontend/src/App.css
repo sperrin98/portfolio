@@ -8,6 +8,21 @@
   scroll-snap-type: y mandatory;
 }
 
+/* App.css */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensure the background is behind other content */
+}
+
+/* Ensure content is above the animated background */
+.App {
+  position: relative;
+  z-index: 1;
+}
 
 /* ABOUT ME PAGE */
 #about-me {
