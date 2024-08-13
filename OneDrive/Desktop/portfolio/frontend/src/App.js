@@ -67,6 +67,10 @@ function App() {
         </div>
       </section>
 
+      <div class="aboutme-header-container">
+        <h1 class="aboutme-header">About Me</h1>
+      </div>
+
       <section className="section" id="about-me">
         <div className="left-content">
           <img className='profile-img' src={profileImage} alt="Profile" />
@@ -86,6 +90,7 @@ function App() {
           </div>
         </div>
       </section>
+
 
       <section className="section" id="work-projects">
         <h1>Work / Projects</h1>
