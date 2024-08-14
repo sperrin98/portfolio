@@ -10,6 +10,8 @@ import SkillsCarousel from './SkillsCarousel'; // Import the SkillsCarousel comp
 import profileImage from './assets/profile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 function App() {
   const scrollToSection = (sectionId) => {
@@ -63,6 +65,9 @@ function App() {
               </a>
               <a href="https://facebook.com/your-facebook-username" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+              <a href="mailto:stanperrin98@gmail.com" target="_blank" rel="noopener noreferrer">
+    <           FontAwesomeIcon icon={faEnvelope} size="2x" />
               </a>
             </div>
           </div>
