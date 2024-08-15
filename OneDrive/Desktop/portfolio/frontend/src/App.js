@@ -4,19 +4,21 @@ import './Overview.css';
 import './AboutMe.css';
 import './Work.css';
 import './ContactMe.css';
+import './ProfileImage.css'; // Add the CSS file for profile image styling
 import ProjectCard from './ProjectCard';
 import MapComponent from './MapComponent';
-import SkillsCarousel from './SkillsCarousel'; // Import the SkillsCarousel component
+import SkillsCarousel from './SkillsCarousel';
 import profileImage from './assets/profile.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Skills data
   const skills = [
     'HTML & CSS',
     'Ruby on Rails',
@@ -33,7 +35,6 @@ function App() {
           <div className="nav-buttons">
             <button onClick={() => scrollToSection('about-me')}>About Me</button>
             <button onClick={() => scrollToSection('work-projects')}>Work / Projects</button>
-            <button onClick={() => scrollToSection('skills')}>Skills</button>
             <button onClick={() => scrollToSection('contact-me')}>Contact Me</button>
           </div>
           <div className="main-container">
@@ -64,6 +65,9 @@ function App() {
               <a href="https://facebook.com/your-facebook-username" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
+              <a href="mailto:stanperrin98@gmail.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+              </a>
             </div>
           </div>
         </div>
@@ -75,7 +79,10 @@ function App() {
 
       <section className="section" id="about-me">
         <div className="left-content">
-          <img className='profile-img' src={profileImage} alt="Profile" />
+          <div className="img-wrap">
+            <img className="profile-img" src={profileImage} alt="Profile" />
+          </div>
+
           <h1 className='aboutme-header'>A little bit about me...</h1>
           <p className='about-section'>
             I am a web developer, specialising in both frontend and backend practices, both the interface and design of a website or app. I graduated Le Wagon's Web Development in July of 2022, and have years of experience building web apps, since 2020.
@@ -85,7 +92,7 @@ function App() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        {/* <h1 className='travel-header'>Where I've travelled</h1> */}
+
         <div className='right-content'>
           <div className="map-container">
             <MapComponent />
