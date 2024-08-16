@@ -82,7 +82,6 @@ function App() {
           <div className="img-wrap">
             <img className="profile-img" src={profileImage} alt="Profile" />
           </div>
-
           <h1 className='aboutme-header'>A little bit about me...</h1>
           <p className='about-section'>
             I am a web developer, specialising in both frontend and backend practices, both the interface and design of a website or app. I graduated Le Wagon's Web Development in July of 2022, and have years of experience building web apps, since 2020.
@@ -94,11 +93,12 @@ function App() {
         </div>
 
         <div className='right-content'>
-          <div className="map-container">
+          <div className="map-wrap">
             <MapComponent />
           </div>
         </div>
       </section>
+
 
       <div className='work-header-container'>
         <h1 className='work-header'>Work / Projects</h1>
