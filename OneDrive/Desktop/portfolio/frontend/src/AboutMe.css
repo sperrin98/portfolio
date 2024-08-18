@@ -90,7 +90,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px #00FFD9;
+    border: solid 2px red;
     box-shadow: 5px 5px 40px gray;
   }
   
@@ -98,3 +98,45 @@
     width: 100%;
     height: 100%;
   }
+
+  .map-wrap {
+    position: relative;
+    width: 500px;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 5px 5px 40px gray;
+  }
+  
+  .map-wrap .leaflet-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .map-wrap::before,
+  .map-wrap::after {
+    content: '';
+    position: absolute;
+    border-radius: 0; /* Keep borders as straight lines */
+    width: 540px; /* Larger than the map */
+    height: 790px; /* Larger than the map */
+    box-sizing: border-box;
+    border: 4px solid; /* Border width */
+  }
+  
+  .map-wrap::before {
+    top: -15px; /* Adjust to bring closer */
+    right: -15px; /* Adjust to bring closer */
+    border-color: red; /* Red border */
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%); /* Top-right quarter */
+  }
+  
+  .map-wrap::after {
+    bottom: -15px; /* Adjust to bring closer */
+    left: -15px; /* Adjust to bring closer */
+    border-color: black; /* Black border */
+    clip-path: polygon(0% 50%, 50% 50%, 50% 100%, 0% 100%); /* Bottom-left quarter */
+  }
+  

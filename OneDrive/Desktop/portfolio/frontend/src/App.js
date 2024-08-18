@@ -82,23 +82,21 @@ function App() {
           <div className="img-wrap">
             <img className="profile-img" src={profileImage} alt="Profile" />
           </div>
-
           <h1 className='aboutme-header'>A little bit about me...</h1>
           <p className='about-section'>
-            I am a web developer, specialising in both frontend and backend practices, both the interface and design of a website or app. I graduated Le Wagon's Web Development in July of 2022, and have years of experience building web apps, since 2020.
-          </p>
+            Born and raised in West London, Ealing, I am 25 years old and I am a web developer, specialising in both frontend and backend practices, both the interface and design of a website or app. I graduated from Le Wagon's Web Development bootcamp in July of 2022, and have years of experience in programming prior. My hobbies include music, I love going to see my favourite bands, and I am also an avid football fan, supporting Reading FC. For the past 16 months, I have been travelling through out South East Asia, before relocating to Melbourne, Australia for a year to work. On the right, is a map of all the places I travelled to.          </p>
           <h1 className='experience-header'>My experience</h1>
           <p className='experience-section'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            Graduating from an intense bootcamp with Le Wagon, which is ranked as the world's best coding bootcamp, I worked in a team to create a mobile app 'Flickswipe' in a team of 4. Since then, I have worked on different projects, mainly Perrinvest an investment app, and also designing menus and a booking system to a local restaurant in Ealing. The world of programming is so broad, and I am also eager to learn more.           </p>
         </div>
 
         <div className='right-content'>
-          <div className="map-container">
+          <div className="map-wrap">
             <MapComponent />
           </div>
         </div>
       </section>
+
 
       <div className='work-header-container'>
         <h1 className='work-header'>Work / Projects</h1>
