@@ -1,62 +1,98 @@
+/* Main container for the carousel */
 .skills-carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%; /* Width of the carousel */
-    height: 100%; /* Full height of the container */
-    overflow: hidden;
-    border: 1px solid #ccc; /* Optional border */
-    border-radius: 5px; /* Optional border radius */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  overflow: hidden; /* Hide any overflow */
+  border: 1px solid #ccc; /* Optional border */
+  border-radius: 5px; /* Optional border radius */
 }
 
+/* Container that holds the slides */
 .carousel-container {
-    height: 100%; /* Full height of the carousel */
-    overflow: hidden; /* Hide overflowing content */
-    position: relative;
+  height: 100%; /* Full height of the carousel */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
 }
 
+/* Wrapper for the slides */
 .carousel-slides {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease;
-    height: 100%; /* Full height of the carousel */
-    width: 100%; /* Full width of the carousel */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease;
+  height: 100%; /* Full height of the carousel */
+  width: 100%; /* Full width of the carousel */
 }
 
+/* Each slide configuration */
 .carousel-slide {
-    height: 100%; /* Ensure each slide takes full height */
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #ddd;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    text-align: center; /* Center text horizontally */
+  height: 100%; /* Ensure each slide takes full height */
+  width: 500px; /* Adjust width as needed */
+  display: flex;
+  flex-direction: column; /* Stack title, images, and description vertically */
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Add padding if needed */
 }
 
-  .skills-carousel:hover {
-    overflow: hidden; /* Disable page scroll when hovering over the carousel */
+/* Container for images within a slide */
+.images-container {
+  display: flex; /* Align items horizontally */
+  flex-wrap: nowrap; /* Prevent images from wrapping to the next line */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  gap: 10px; /* Space between images */
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Align images vertically */
+  margin: 10px 0; /* Margin above and below the images */
+  padding: 10px; /* Add padding inside the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style for each skill image */
+.skill-image {
+  max-width: 200px; /* Adjust width as needed */
+  max-height: 200px; /* Adjust height as needed */
+  object-fit: contain; /* Ensure the image maintains aspect ratio */
+  margin: 5px; /* Space around each image */
+}
+
+/* Define the keyframes for spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .carousel-control {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    width: 100%;
-    text-align: center;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .prev {
-    top: 0;
-  }
-  
-  .next {
-    bottom: 0;
-  }
-  
+}
+
+/* Apply the spinning animation to the React logo */
+.react-logo {
+  animation: spin 5s linear infinite; /* Adjust duration and timing as needed */
+  display: block; /* Ensure block display to control dimensions */
+  max-width: 200px; /* Ensure logo does not exceed container size */
+  max-height: 200px; /* Ensure logo does not exceed container size */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.skills-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers */
+}
+
+/* Hide scrollbar in Internet Explorer and Edge */
+.carousel-container {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Firefox */
+.images-container {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}

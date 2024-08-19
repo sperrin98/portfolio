@@ -4,7 +4,14 @@ import './Overview.css';
 import './AboutMe.css';
 import './Work.css';
 import './ContactMe.css';
-import './ProfileImage.css'; // Add the CSS file for profile image styling
+import './ProfileImage.css';
+import html5Image from './assets/html5.png';
+import cssImage from './assets/css.png';
+import rubyImage from './assets/ruby.png';
+import mySqlImage from './assets/mysql.png';
+import javascriptImage from './assets/javascript.png';
+import reactLogo from './assets/react.png';
+import pythonLogo from './assets/python.png';
 import ProjectCard from './ProjectCard';
 import MapComponent from './MapComponent';
 import SkillsCarousel from './SkillsCarousel';
@@ -20,12 +27,36 @@ function App() {
   };
 
   const skills = [
-    'HTML & CSS',
-    'Ruby on Rails',
-    'SQL',
-    'JavaScript',
-    'React',
-    'Python'
+    {
+      name: 'HTML & CSS',
+      description: 'The foundation of web development, creating structure and styling.',
+      images: [ html5Image, cssImage ],
+    },
+    {
+      name: 'Ruby on Rails',
+      description: 'A powerful web application framework for building dynamic websites.',
+      images: [ rubyImage ],
+    },
+    {
+      name: 'SQL',
+      description: 'Database management and query language for data-driven applications.',
+      images: [ mySqlImage ],
+    },
+    {
+      name: 'JavaScript',
+      description: 'The language of the web, adding interactivity to your websites.',
+      images: [ javascriptImage ],
+    },
+    {
+      name: 'React',
+      description: 'A JavaScript library for building user interfaces.',
+      images: [ reactLogo ],
+    },
+    {
+      name: 'Python',
+      description: 'A versatile programming language used in various domains.',
+      images: [ pythonLogo ],
+    },
   ];
 
   return (
@@ -47,6 +78,12 @@ function App() {
                 href="mailto:stanperrin98@gmail.com?subject=Get in Touch&body=Hello, I'd like to get in touch with you."
               >
                 Get in Touch
+              </a>
+              <a
+                className="resume-btn"
+                href="mailto:stanperrin98@gmail.com?subject=Get in Touch&body=Hello, I'd like to get in touch with you."
+              >
+                My Resume
               </a>
             </div>
             <h1 className='skills-title'>MY SKILLS</h1>
