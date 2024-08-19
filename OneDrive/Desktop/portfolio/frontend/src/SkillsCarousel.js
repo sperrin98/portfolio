@@ -40,13 +40,25 @@ const SkillsCarousel = ({ skills }) => {
   return (
     <div className="skills-carousel" ref={carouselRef}>
       <div className="carousel-container">
-        <div
-          className="carousel-slides"
-          style={{ transform: `translateY(-${currentIndex * 100}%)` }}
-        >
+        <div className="carousel-slides" style={{ transform: `translateY(-${currentIndex * 100}%)` }}>
           {skills.map((skill, index) => (
             <div key={index} className="carousel-slide">
-              <h2 className="skill-title">{skill}</h2>
+              <h2 className="skill-title">{skill.name}</h2>
+              <p className="skill-description">{skill.description}</p>
+              <div className="images-container">
+                {Array.isArray(skill.images) ? (
+                  skill.images.map((image, idx) => (
+                    <img
+                      key={idx}
+                      src={image}
+                      alt={skill.name}
+                      className={skill.name === 'React' ? 'skill-image react-logo' : 'skill-image'}
+                    />
+                  ))
+                ) : (
+                  <p>No images available</p>
+                )}
+              </div>
             </div>
           ))}
         </div>
