@@ -48,6 +48,12 @@ function App() {
               >
                 Get in Touch
               </a>
+              <a
+                className="resume-btn"
+                href="mailto:stanperrin98@gmail.com?subject=Get in Touch&body=Hello, I'd like to get in touch with you."
+              >
+                My Resume
+              </a>
             </div>
             <h1 className='skills-title'>MY SKILLS</h1>
             <div className="skills-container">

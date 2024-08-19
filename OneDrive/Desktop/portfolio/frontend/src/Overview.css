@@ -114,6 +114,26 @@
   .contact-btn:hover {
     box-shadow: 0 0 0 0 black; /* Brings the border back to the button */
   }
+
+  .resume-btn {
+    display: inline-block;
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid black; /* Original border color */
+    position: relative; /* Required for positioning the pseudo-element */
+    box-shadow: 5px 5px 0 0 black; /* Moves the border 5px away from the button */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    margin-left: 50px;
+  }
+
+  .resume-btn:hover {
+    box-shadow: 0 0 0 0 black;
+  }
   
   /* NAV BUTTONS */
   .nav-buttons {
